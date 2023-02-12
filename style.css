@@ -1,0 +1,77 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0D2A54;
+}
+
+ul {
+  margin: 0;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 37px -11px rgba(0, 0, 0, 0.75);
+}
+main a {
+  text-align: center;
+  display: block;
+  color: #333;
+}
+main a:hover {
+  color: #666;
+}
+
+.accordion {
+  border: solid 1px #D0DBF1;
+  transition: all 0.3s ease-in-out;
+}
+.accordion .accordion__title {
+  list-style-type: none;
+  cursor: pointer;
+  color: #0D2A54;
+  padding: 24px;
+  border-bottom: none;
+  background-image: url("./arrowdown.png");
+  background-position: right 1rem center;
+  background-repeat: no-repeat;
+  background-size: 22px;
+}
+.accordion .accordion__title::marker, .accordion .accordion__title::-webkit-details-marker {
+  display: none;
+}
+.accordion .accordion__content ul {
+  padding: 0 24px;
+}
+.accordion .accordion__content li {
+  padding: 4px 0;
+  list-style-type: circle;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #0D2A54;
+}
+.accordion .accordion__content li::marker {
+  color: #2B41B7;
+  font-size: 18px;
+}
+.accordion[open] {
+  border-color: #D0DBF1;
+}
+.accordion[open] .accordion__title {
+  color: #2B41B7;
+  background-image: url(./arrowup.png);
+  background-repeat: no-repeat;
+  background-size: 12px;
+  padding: 24px 24px 0 24px;
+  background-position-y: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */

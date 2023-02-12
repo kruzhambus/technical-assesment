@@ -1,0 +1,87 @@
+
+$blue: #0D2A54
+$blue-primary: #2B41B7
+$black-primary: #0D2A54
+$gray: #D0DBF1
+
+*, *::before, *::after
+    box-sizing: border-box
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 800
+    font-size: 16px
+    line-height: 24px
+    color: $blue
+
+ul 
+    margin: 0
+
+main
+  max-width: 600px
+  margin: 0 auto
+  background-color: rgba(256,256,256,1)
+  box-shadow: 0px 0px 37px -11px rgba(0,0,0,0.75)
+  
+  a 
+    text-align: center
+    display: block
+    color: #333
+    &:hover
+      color: #666
+
+.accordion
+  border: solid 1px $gray
+  transition: all 0.3s ease-in-out
+  
+
+  .accordion__title 
+    list-style-type: none
+    cursor: pointer
+    color: $blue
+    padding: 24px
+    border-bottom: none
+    background-image: url('./arrowdown.png')
+    background-position: right 1rem center
+    background-repeat: no-repeat
+    background-size: 22px
+    &::marker,
+    &::-webkit-details-marker 
+      display: none
+    
+  
+
+  .accordion__content
+    // border: solid 1px $gray
+    // border: 1px 0px 0px 0px solid $gray
+    ul 
+        padding: 0 24px
+    li
+        padding: 4px 0
+        list-style-type: circle
+        font-family: 'Montserrat'
+        font-style: normal
+        font-weight: 600
+        font-size: 14px
+        line-height: 24px
+        color: $black-primary 
+        &::marker
+            color: $blue-primary
+            font-size: 18px
+        
+
+    
+  
+
+  &[open]
+    border-color: $gray
+
+    .accordion__title
+      color: $blue-primary
+      background-image: url(./arrowup.png)
+      background-repeat: no-repeat
+      background-size: 12px
+      padding: 24px 24px 0 24px
+      background-position-y: 30px
+    
+  
+
